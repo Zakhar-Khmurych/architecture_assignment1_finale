@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TheMain/1.0.0": {
+        "dependencies": {
+          "Commands": "1.0.0",
+          "File": "1.0.0"
+        },
+        "runtime": {
+          "TheMain.dll": {}
+        }
+      },
+      "Commands/1.0.0": {
+        "dependencies": {
+          "File": "1.0.0"
+        },
+        "runtime": {
+          "Commands.dll": {}
+        }
+      },
+      "File/1.0.0": {
+        "runtime": {
+          "File.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TheMain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Commands/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "File/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
