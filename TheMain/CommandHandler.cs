@@ -17,7 +17,7 @@ public class CommandHandler
     
     public void ReadConsole()
     {
-        Console.WriteLine("The program is running! write your commands:");
+        Console.WriteLine("The program is running! Write your commands:");
         while (Running)
         {
             Input = Console.ReadLine().ToLower();
@@ -47,6 +47,29 @@ public class CommandHandler
                     Input = string.Join(" ", args.Skip(1));
                     FileSystem.Execute(list, Input);
                 }  
+                if (args[0] == "options")
+                {
+                    if (args[1] == "summary")
+                    {
+                        SummaryTxt summary = new SummaryTxt();
+                        Input = string.Join(" ", args.Skip(2));
+                        FileSystem.Execute(summary, Input);
+                    }
+                    if (args[1] == "print")
+                    {
+                        PrintCsv printCsv = new PrintCsv();
+                        Input = string.Join(" ", args.Skip(2));
+                        FileSystem.Execute(printCsv, Input);
+                    }  
+                    if (args[1] == "validate")
+                    {
+                        ValidateJsonCsv validate = new ValidateJsonCsv();
+                        Input = string.Join(" ", args.Skip(2));
+                        FileSystem.Execute(validate, Input);
+                    }  
+                }
+
+
             }
 
          
